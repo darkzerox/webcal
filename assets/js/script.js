@@ -1,9 +1,7 @@
 (function ($) {
 
   $(document).ready(function () {
-
     var global_select_packet = []
-
     $.ajax({
       url: "/assets/db/price.json",
       dataType: 'json',
@@ -72,14 +70,22 @@
 
     function selectEvent() {
       $('.option-item input').on('click', function (event) {
-
-        $(this).parent().toggleClass('item-active')
+        let is_active = $(this).parent().hasClass('item-active')
+        $(this).parent().addClass('item-active')
         let id = $(this).attr('id')
         let val = $(this).attr('val')
-        // data.push({ $(this).attr('id') : $(this).attr('val')})
-        global_select_packet.push({
-          [id]: val
-        })
+
+
+        if (is_active) {
+          console.log('same');
+          $(this).parent().removeClass('item-active')
+
+        } else {
+          global_select_packet.push({
+            [id]: val
+          })
+        }
+
         // var a = $(this).find('.custom-control-label').text()
 
         console.log(global_select_packet)
