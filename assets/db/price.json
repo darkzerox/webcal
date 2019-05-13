@@ -1,0 +1,87 @@
+{
+  "packets": [{
+      "packet": "template",
+      "label": "Use Template",
+      "value": "template"
+    },
+    {
+      "packet": "simple",
+      "label": "Use Simple",
+      "value": "simple"
+    }
+  ],
+  "template": [{
+    "basic": {
+      "responsive": 500,
+      "page_amount": 100,
+      "article_write": 200,
+      "blog": 100,
+      "speed": 600,
+      "seo": 850
+    },
+    "ecommerce": {
+      "onlineshop": 1000,
+      "product": 100,
+      "shipping": 200,
+      "ems_tracking": 200,
+      "sms_message": 100,
+      "payment": 300
+
+    },
+    "extra": {
+      "logo_design": 2000,
+      "contact_form": 1000,
+      "member": 3000,
+      "gallery": 1000,
+      "google_analytic": 100,
+      "social_shere": 100,
+      "live_chat": 100,
+      "multiple_language": 7000,
+      "migrade": 3000,
+      "site_search": 300
+    },
+    "server": {
+      "domain": 200,
+      "hosting": 300,
+      "https": 900,
+      "backup": 300
+    }
+  }],
+  "simple": [{
+    "basic": {
+      "responsive": 1500,
+      "page_amount": 1100,
+      "article_write": 1200,
+      "blog": 1100,
+      "speed": 1600,
+      "seo": 1850
+    },
+    "ecommerce": {
+      "onlineshop": 11000,
+      "product": 1100,
+      "shipping": 1200,
+      "ems_tracking": 1200,
+      "sms_message": 1100,
+      "payment": 1300
+
+    },
+    "extra": {
+      "logo_design": 12000,
+      "contact_form": 11000,
+      "member": 13000,
+      "gallery": 11000,
+      "google_analytic": 1100,
+      "social_shere": 1100,
+      "live_chat": 1100,
+      "multiple_language": 70100,
+      "migrade": 30100,
+      "site_search": 3100
+    },
+    "server": {
+      "domain": 2100,
+      "hosting": 1300,
+      "https": 1900,
+      "backup": 1300
+    }
+  }]
+}
