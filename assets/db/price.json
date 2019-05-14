@@ -11,77 +11,278 @@
     }
   ],
   "template": [{
-    "basic": {
-      "responsive": 500,
-      "page_amount": 100,
-      "article_write": 200,
-      "blog": 100,
-      "speed": 600,
-      "seo": 850
-    },
-    "ecommerce": {
-      "onlineshop": 1000,
-      "product": 100,
-      "shipping": 200,
-      "ems_tracking": 200,
-      "sms_message": 100,
-      "payment": 300
+    "basic": [{
+        "option_label": "page amount",
+        "option_key": "page_amount",
+        "option_price": 100,
+        "option_dynamic": true
 
-    },
-    "extra": {
-      "logo_design": 2000,
-      "contact_form": 1000,
-      "member": 3000,
-      "gallery": 1000,
-      "google_analytic": 100,
-      "social_shere": 100,
-      "live_chat": 100,
-      "multiple_language": 7000,
-      "migrade": 3000,
-      "site_search": 300
-    },
-    "server": {
-      "domain": 200,
-      "hosting": 300,
-      "https": 900,
-      "backup": 300
-    }
+      },
+      {
+        "option_label": "responsive",
+        "option_key": "responsive",
+        "option_price": 100
+      },
+      {
+        "option_label": "write article",
+        "option_key": "write_article",
+        "option_price": 100
+      },
+      {
+        "option_label": "blog",
+        "option_key": "blog",
+        "option_price": 100
+      },
+      {
+        "option_label": "speed",
+        "option_key": "speed",
+        "option_price": 100
+      },
+      {
+        "option_label": "seo",
+        "option_key": "seo",
+        "option_price": 100
+      }
+    ],
+    "ecommerce": [{
+        "option_label": "onlineshop",
+        "option_key": "onlineshop",
+        "option_price": 100
+      },
+      {
+        "option_label": "product",
+        "option_key": "product",
+        "option_price": 100
+      },
+      {
+        "option_label": "shipping",
+        "option_key": "shipping",
+        "option_price": 100
+      },
+      {
+        "option_label": "ems_tracking",
+        "option_key": "ems_tracking",
+        "option_price": 100
+      },
+      {
+        "option_label": "sms_message",
+        "option_key": "sms_message",
+        "option_price": 100
+      },
+      {
+        "option_label": "payment",
+        "option_key": "payment",
+        "option_price": 100
+      }
+    ],
+
+    "extra": [{
+        "option_label": "logo design",
+        "option_key": "logo_design",
+        "option_price": 100
+      },
+      {
+        "option_label": "contact form",
+        "option_key": "contact_form",
+        "option_price": 100
+      }, {
+        "option_label": "member",
+        "option_key": "member",
+        "option_price": 100
+      }, {
+        "option_label": "gallery",
+        "option_key": "gallery",
+        "option_price": 100
+      }, {
+        "option_label": "google analytic",
+        "option_key": "google_analytic",
+        "option_price": 100
+      },
+      {
+        "option_label": "social shere",
+        "option_key": "social_shere",
+        "option_price": 100
+      },
+      {
+        "option_label": "live chat",
+        "option_key": "live_chat",
+        "option_price": 100
+      },
+      {
+        "option_label": "multiple language",
+        "option_key": "multiple_language",
+        "option_price": 100
+      },
+      {
+        "option_label": "migrade",
+        "option_key": "migrade",
+        "option_price": 100
+      },
+      {
+        "option_label": "site search",
+        "option_key": "site_search",
+        "option_price": 100
+      }
+    ],
+
+    "server": [{
+        "option_label": "domain",
+        "option_key": "domain",
+        "option_price": 100
+      },
+      {
+        "option_label": "hosting",
+        "option_key": "hosting",
+        "option_price": 100
+      },
+      {
+        "option_label": "https",
+        "option_key": "https",
+        "option_price": 100
+      },
+      {
+        "option_label": "backup",
+        "option_key": "backup",
+        "option_price": 100
+      }
+    ]
+
   }],
-  "simple": [{
-    "basic": {
-      "responsive": 1500,
-      "page_amount": 1100,
-      "article_write": 1200,
-      "blog": 1100,
-      "speed": 1600,
-      "seo": 1850
-    },
-    "ecommerce": {
-      "onlineshop": 11000,
-      "product": 1100,
-      "shipping": 1200,
-      "ems_tracking": 1200,
-      "sms_message": 1100,
-      "payment": 1300
 
-    },
-    "extra": {
-      "logo_design": 12000,
-      "contact_form": 11000,
-      "member": 13000,
-      "gallery": 11000,
-      "google_analytic": 1100,
-      "social_shere": 1100,
-      "live_chat": 1100,
-      "multiple_language": 70100,
-      "migrade": 30100,
-      "site_search": 3100
-    },
-    "server": {
-      "domain": 2100,
-      "hosting": 1300,
-      "https": 1900,
-      "backup": 1300
-    }
+  "simple": [{
+    "basic": [{
+        "option_label": "page amount",
+        "option_key": "page_amount",
+        "option_price": 123
+      },
+      {
+        "option_label": "responsive",
+        "option_key": "responsive",
+        "option_price": 456
+      },
+      {
+        "option_label": "write article",
+        "option_key": "write_article",
+        "option_price": 789
+      },
+      {
+        "option_label": "blog",
+        "option_key": "blog",
+        "option_price": 1001
+      },
+      {
+        "option_label": "speed",
+        "option_key": "speed",
+        "option_price": 1123
+      },
+      {
+        "option_label": "seo",
+        "option_key": "seo",
+        "option_price": 2345
+      }
+    ],
+    "ecommerce": [{
+        "option_label": "onlineshop",
+        "option_key": "onlineshop",
+        "option_price": 4567
+      },
+      {
+        "option_label": "product",
+        "option_key": "product",
+        "option_price": 7890
+      },
+      {
+        "option_label": "shipping",
+        "option_key": "shipping",
+        "option_price": 1155
+      },
+      {
+        "option_label": "ems_tracking",
+        "option_key": "ems_tracking",
+        "option_price": 7755
+      },
+      {
+        "option_label": "sms_message",
+        "option_key": "sms_message",
+        "option_price": 4411
+      },
+      {
+        "option_label": "payment",
+        "option_key": "payment",
+        "option_price": 5544
+      }
+    ],
+
+    "extra": [{
+        "option_label": "logo design",
+        "option_key": "logo_design",
+        "option_price": 7788
+      },
+      {
+        "option_label": "contact form",
+        "option_key": "contact_form",
+        "option_price": 4455
+      }, {
+        "option_label": "member",
+        "option_key": "member",
+        "option_price": 4455
+      }, {
+        "option_label": "gallery",
+        "option_key": "gallery",
+        "option_price": 7788
+      }, {
+        "option_label": "google analytic",
+        "option_key": "google_analytic",
+        "option_price": 9977
+      },
+      {
+        "option_label": "social shere",
+        "option_key": "social_shere",
+        "option_price": 4455
+      },
+      {
+        "option_label": "live chat",
+        "option_key": "live_chat",
+        "option_price": 778
+      },
+      {
+        "option_label": "multiple language",
+        "option_key": "multiple_language",
+        "option_price": 998
+      },
+      {
+        "option_label": "migrade",
+        "option_key": "migrade",
+        "option_price": 778
+      },
+      {
+        "option_label": "site search",
+        "option_key": "site_search",
+        "option_price": 4445
+      }
+    ],
+
+    "server": [{
+        "option_label": "domain",
+        "option_key": "domain",
+        "option_price": 444
+      },
+      {
+        "option_label": "hosting",
+        "option_key": "hosting",
+        "option_price": 777
+      },
+      {
+        "option_label": "https",
+        "option_key": "https",
+        "option_price": 999
+      },
+      {
+        "option_label": "backup",
+        "option_key": "backup",
+        "option_price": 777
+      }
+    ]
+
   }]
 }
