@@ -13,8 +13,14 @@
         var optionChoice = []
         packet[0].forEach(res => {
           // console.log(res)
-          packethtml += `
-          <li class="packet" val="${res.packet}"> ${res.label} </li>
+          packethtml += `          
+          <div class="form-check">
+            <input class="packet form-check-input" type="radio" name="packet-item" id="${res.packet}" val="${res.packet}">
+            <label class="form-check-label" for="${res.packet}">
+              ${res.label}
+            </label>
+          </div>
+
           `
         });
         packethtml = `<ul>${packethtml}</ul>`;
@@ -77,23 +83,41 @@
 
 
         if (is_active) {
-          console.log('same');
+
           $(this).parent().removeClass('item-active')
 
+          //remove item key in array
+          global_select_packet = $.grep(global_select_packet, function (value) {
+            return value[id] != val;
+          });
         } else {
           global_select_packet.push({
             [id]: val
           })
         }
 
-        // var a = $(this).find('.custom-control-label').text()
 
-        console.log(global_select_packet)
+
+        // console.log(global_select_packet)
+        let total = sum_select_packet(global_select_packet)
+        $('#total').text(total)
+        console.log(total);
+
       })
 
 
     }
 
+    function sum_select_packet(obj) {
+      let sum = 0
+      $.each(obj, function (i, j) {
+        $.each(j, function (key, val) {
+          sum += parseInt(val);
+          // console.log(val)
+        })
+      })
+      return sum
+    }
 
 
 

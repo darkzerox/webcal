@@ -1,3 +1,9 @@
 .item-active {
-  color: red;
+  color: green;
+}
+
+.total-el {
+  position: fixed;
+  right: 50px;
+  top: 20px;
 }
