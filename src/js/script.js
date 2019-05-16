@@ -1,59 +1,9 @@
 (function ($) {
 
-  window.fbAsyncInit = function () {
-    FB.init({
-      appId: '433922547396359',
-      autoLogAppEvents: true,
-      xfbml: true,
-      version: 'v2.10'
-    });
-    FB.AppEvents.logPageView();
-  };
-
-  (function (d, s, id) {
-    var js, fjs = d.getElementsByTagName(s)[0];
-    if (d.getElementById(id)) {
-      return;
-    }
-    js = d.createElement(s);
-    js.id = id;
-    js.src = "//connect.facebook.net/en_US/sdk.js";
-    fjs.parentNode.insertBefore(js, fjs);
-  }(document, 'script', 'facebook-jssdk'));
-
-  function shareOverrideOGMeta(overrideLink, overrideTitle, overrideDescription, overrideImage) {
-    FB.ui({
-        method: 'share_open_graph',
-        action_type: 'og.likes',
-        action_properties: JSON.stringify({
-          object: {
-            'og:url': overrideLink,
-            'og:title': overrideTitle,
-            'og:description': overrideDescription,
-            'og:image': overrideImage
-          }
-        })
-      },
-      function (response) {
-        // Action after response
-        console.log('fb sent')
-      });
-  }
-
-
 
   $(document).ready(function () {
 
-    //fb share
-    $('#fbshare').click(function () {
 
-      $("meta[property='og\\:title']").attr("content", 'cost total : ' + $('#total').text());
-
-      shareOverrideOGMeta("https://webcost.darkxee.com/", "FB Custom TITLE", "FB CUSTOM DESCTIPTION")
-
-
-
-    })
 
     //social share
     $("#share").jsSocials({
@@ -89,11 +39,18 @@
 
         $('.packet').click(function () {
 
-          //reset total
-          sum = 0
-          global_select_packet = []
+          setTimeout(() => {
+            setPacket_from_Store()
+          }, 100);
 
           var pk = $(this).attr('val')
+          //set packet local store
+
+          localStorage.setItem('packet', pk)
+          // console.log(pk)
+
+
+
           var packetData = jsonPath(jsonData, "$.." + pk);
 
           var packet_basic = jsonPath(packetData, "$..basic");
@@ -114,7 +71,6 @@
     function getOptionData(data_list, el, title) {
       let html_skele = `<h3>${title}</h3>`;
       $.each(data_list, function (i, obj) {
-
         $.each(obj, function (key, val) {
           // console.log(val.option_dynamic)
           var amount = ''
@@ -143,6 +99,7 @@
 
       $('#' + el).html('').html(html_skele)
 
+
       amount_click()
 
 
@@ -159,8 +116,6 @@
 
     function selectEvent() {
       $('.option-item').on('change', function (event) {
-
-        // console.log('change') 
 
         let is_active = $(this).find('.option-val').prop("checked");
         // console.log(is_active)
@@ -187,7 +142,11 @@
             price: val
           })
         }
-        // console.log(global_select_packet)
+        console.log(global_select_packet)
+
+        //save packet data to local storeage
+        localStorage.setItem('packet_data', JSON.stringify(global_select_packet))
+
         let before_count = $('#total').text()
         let total = sum_select_packet(global_select_packet)
         $('#total').text(total)
@@ -242,5 +201,40 @@
 
 
   })
+
+
+  $(window).on('load', function () {
+    //get save data from localstore
+    let local_packet = localStorage.getItem('packet');
+
+
+    if (local_packet != null) {
+      $('#packet_section').find('#' + local_packet).prop('checked', true).click().delay(100, function () {
+        console.log('delay')
+
+        // setPacket_from_Store()
+      })
+
+
+    }
+
+
+  });
+
+
+
+  function setPacket_from_Store() {
+    let local_packet_data = JSON.parse(localStorage.getItem('packet_data'))
+    // console.log(local_packet_data)
+    if (local_packet_data != null) {
+      $.each(local_packet_data, function (key, val) {
+        // console.log(val.key)
+        $('#' + val.key).click()
+      })
+    }
+
+
+  }
+
 
 })(window.jQuery);
