@@ -1,6 +1,53 @@
 (function ($) {
 
+  window.fbAsyncInit = function () {
+    FB.init({
+      appId: '433922547396359',
+      autoLogAppEvents: true,
+      xfbml: true,
+      version: 'v2.10'
+    });
+    FB.AppEvents.logPageView();
+  };
+
+  (function (d, s, id) {
+    var js, fjs = d.getElementsByTagName(s)[0];
+    if (d.getElementById(id)) {
+      return;
+    }
+    js = d.createElement(s);
+    js.id = id;
+    js.src = "//connect.facebook.net/en_US/sdk.js";
+    fjs.parentNode.insertBefore(js, fjs);
+  }(document, 'script', 'facebook-jssdk'));
+
+  function shareOverrideOGMeta(overrideLink, overrideTitle, overrideDescription, overrideImage) {
+    FB.ui({
+        method: 'share_open_graph',
+        action_type: 'og.likes',
+        action_properties: JSON.stringify({
+          object: {
+            'og:url': overrideLink,
+            'og:title': overrideTitle,
+            'og:description': overrideDescription,
+            'og:image': overrideImage
+          }
+        })
+      },
+      function (response) {
+        // Action after response
+      });
+  }
+
+
+
   $(document).ready(function () {
+
+    //fb share
+    $('#fbshare').click(function () {
+      shareOverrideOGMeta("aaaa", "titlle", "description")
+
+    })
 
     //social share
     $("#share").jsSocials({
@@ -176,7 +223,8 @@
       })
 
       $(document).prop('title', title + " ( cost total : " + sum + " )");
-      $('meta[property=og:title]').attr('content', 'cost total : ' + sum);
+
+
 
       return sum
     }
