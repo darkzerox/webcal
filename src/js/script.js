@@ -45,7 +45,7 @@
 
     //fb share
     $('#fbshare').click(function () {
-      shareOverrideOGMeta("https://webcost.darkxee.com/", "titlle", "description")
+      shareOverrideOGMeta("https://webcost.darkxee.com/", "FB Custom TITLE", "FB CUSTOM DESCTIPTION")
 
     })
 
