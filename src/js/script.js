@@ -7,7 +7,7 @@
       shares: ["email", "twitter", "facebook", "pinterest", ]
     });
 
-
+    var title = $(document).prop('title');
     var global_select_packet = []
     var sum = 0
 
@@ -165,6 +165,8 @@
 
     }
 
+
+
     function sum_select_packet(obj) {
       sum = 0;
       $.each(obj, function (i, j) {
@@ -172,8 +174,10 @@
         sum += parseInt(j.price);
 
       })
-      let title = $(document).prop('title');
+
       $(document).prop('title', title + " ( cost total : " + sum + " )");
+      $('meta[property=og:title]').attr('content', 'cost total : ' + sum);
+
       return sum
     }
 
