@@ -1,6 +1,13 @@
 (function ($) {
 
   $(document).ready(function () {
+
+    //social share
+    $("#share").jsSocials({
+      shares: ["email", "twitter", "facebook", "pinterest", ]
+    });
+
+
     var global_select_packet = []
     var sum = 0
 
@@ -81,7 +88,7 @@
         });
       });
 
-      $('#' + el).html('').html(html_skele + '<hr/>')
+      $('#' + el).html('').html(html_skele)
 
       amount_click()
 
@@ -165,6 +172,8 @@
         sum += parseInt(j.price);
 
       })
+      let title = $(document).prop('title');
+      $(document).prop('title', title + " ( cost total : " + sum + " )");
       return sum
     }
 
