@@ -209,13 +209,7 @@
 
 
     if (local_packet != null) {
-      $('#packet_section').find('#' + local_packet).prop('checked', true).click().delay(100, function () {
-        console.log('delay')
-
-        // setPacket_from_Store()
-      })
-
-
+      $('#packet_section').find('#' + local_packet).prop('checked', true).click()
     }
 
 
