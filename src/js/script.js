@@ -36,6 +36,7 @@
       },
       function (response) {
         // Action after response
+        console.log('fb sent')
       });
   }
 
@@ -45,7 +46,12 @@
 
     //fb share
     $('#fbshare').click(function () {
+
+      $("meta[property='og\\:title']").attr("content", 'cost total : ' + $('#total').text());
+
       shareOverrideOGMeta("https://webcost.darkxee.com/", "FB Custom TITLE", "FB CUSTOM DESCTIPTION")
+
+
 
     })
 
