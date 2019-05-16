@@ -1,58 +1,67 @@
 {
   "packets": [{
-      "packet": "template",
       "label": "Use Template",
-      "value": "template"
+      "packet": "template"
     },
     {
-      "packet": "simple",
-      "label": "Use Simple",
-      "value": "simple"
+      "label": "Freelance",
+      "packet": "freelance"
+    },
+    {
+      "label": "Company",
+      "packet": "company"
+    },
+    {
+      "label": "Enterprise",
+      "packet": "enterprise"
     }
   ],
   "template": [{
     "basic": [{
         "option_label": "page amount",
         "option_key": "page_amount",
-        "option_price": 100,
+        "option_price": 50,
         "option_dynamic": true
 
       },
       {
         "option_label": "responsive",
         "option_key": "responsive",
-        "option_price": 100
+        "option_price": 555
       },
       {
         "option_label": "write article",
         "option_key": "write_article",
-        "option_price": 100
+        "option_price": 20,
+        "option_dynamic": true
       },
       {
         "option_label": "blog",
         "option_key": "blog",
-        "option_price": 100
+        "option_price": 455
       },
       {
         "option_label": "speed",
         "option_key": "speed",
-        "option_price": 100
+        "option_price": 123
       },
       {
         "option_label": "seo",
         "option_key": "seo",
-        "option_price": 100
+        "option_price": 1070
       }
     ],
     "ecommerce": [{
         "option_label": "onlineshop",
         "option_key": "onlineshop",
-        "option_price": 100
+        "option_price": 1009
       },
       {
         "option_label": "product",
         "option_key": "product",
-        "option_price": 100
+        "option_price": 1000,
+        "option_dynamic": true
+
       },
       {
         "option_label": "shipping",
@@ -62,37 +71,37 @@
       {
         "option_label": "ems_tracking",
         "option_key": "ems_tracking",
-        "option_price": 100
+        "option_price": 2000
       },
       {
         "option_label": "sms_message",
         "option_key": "sms_message",
-        "option_price": 100
+        "option_price": 1500
       },
       {
         "option_label": "payment",
         "option_key": "payment",
-        "option_price": 100
+        "option_price": 3000
       }
     ],
 
     "extra": [{
         "option_label": "logo design",
         "option_key": "logo_design",
-        "option_price": 100
+        "option_price": 500
       },
       {
         "option_label": "contact form",
         "option_key": "contact_form",
-        "option_price": 100
+        "option_price": 888
       }, {
         "option_label": "member",
         "option_key": "member",
-        "option_price": 100
+        "option_price": 777
       }, {
         "option_label": "gallery",
         "option_key": "gallery",
-        "option_price": 100
+        "option_price": 555
       }, {
         "option_label": "google analytic",
         "option_key": "google_analytic",
@@ -101,27 +110,27 @@
       {
         "option_label": "social shere",
         "option_key": "social_shere",
-        "option_price": 100
+        "option_price": 850
       },
       {
         "option_label": "live chat",
         "option_key": "live_chat",
-        "option_price": 100
+        "option_price": 369
       },
       {
         "option_label": "multiple language",
         "option_key": "multiple_language",
-        "option_price": 100
+        "option_price": 120
       },
       {
         "option_label": "migrade",
         "option_key": "migrade",
-        "option_price": 100
+        "option_price": 445
       },
       {
         "option_label": "site search",
         "option_key": "site_search",
-        "option_price": 100
+        "option_price": 150
       }
     ],
 
@@ -149,7 +158,7 @@
 
   }],
 
-  "simple": [{
+  "freelance": [{
     "basic": [{
         "option_label": "page amount",
         "option_key": "page_amount",

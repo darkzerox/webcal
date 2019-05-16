@@ -1,0 +1,28 @@
+{
+  "name": "webcal",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-preset-env": "^1.7.0",
+    "materialize-css": "^1.0.0-rc.2",
+    "node-sass": "^4.12.0"
+  },
+  "devDependencies": {
+    "babel-preset-minify": "^0.5.0"
+  },
+  "scripts": {
+    "build": "babel src -d build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/darkzerox/webcal.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/darkzerox/webcal/issues"
+  },
+  "homepage": "https://github.com/darkzerox/webcal#readme"
+}

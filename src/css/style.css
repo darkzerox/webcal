@@ -1,9 +1,11 @@
+body {
+  padding: 30px
+}
+
 .item-active {
   color: green;
 }
 
 .total-el {
-  position: fixed;
-  right: 50px;
-  top: 20px;
+  font-size: 50px
 }

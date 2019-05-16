@@ -5,7 +5,7 @@
     var sum = 0
 
     $.ajax({
-      url: "/assets/db/price.json",
+      url: "/src/db/price.json",
       dataType: 'json',
       success: function (jsonData) {
 
@@ -14,17 +14,16 @@
 
         packet[0].forEach(res => {
           // console.log(res)
-          packethtml += `          
-          <div class="form-check">
-            <input class="packet form-check-input" type="radio" name="packet-item" id="${res.packet}" val="${res.packet}">
-            <label class="form-check-label" for="${res.packet}">
-              ${res.label}
-            </label>
-          </div>
-
+          packethtml += `    
+          <p>
+            <label>
+              <input class="packet" name="packet-item" type="radio" id="${res.packet}" val="${res.packet}" />
+              <span>${res.label}</span>
+            </label>      
+          </p>
           `
         });
-        packethtml = `<ul>${packethtml}</ul>`;
+        packethtml = `<div>${packethtml}</div>`;
 
         $('#packet_section').html('').html(packethtml)
 
@@ -53,7 +52,7 @@
 
 
     function getOptionData(data_list, el, title) {
-      let html_skele = `<h2>${title}</h2>`;
+      let html_skele = `<h3>${title}</h3>`;
       $.each(data_list, function (i, obj) {
 
         $.each(obj, function (key, val) {
@@ -61,26 +60,41 @@
           var amount = ''
           if (val.option_dynamic == true) {
             amount = `
-            <div class="input-group-append">
-            <input type="number" class="form-control item-amount" >
-           </div>            
+                      
+            <p class="range-field">
+              <input type="number" class="item-amount" placeholder="Input page amount" />
+             
+            </p>
+
             `
           }
           html_skele += `
-          <div class="input-group">
-            <div class="option-item custom-control custom-checkbox">
-              <input type="checkbox" class="custom-control-input option-val" id="${val.option_key}" value="${val.option_price}">
-              <label class="custom-control-label" for="${val.option_key}">${val.option_label} : ${val.option_price}</label>
-              ${amount}
-            </div> 
-            
-          </div>         
+          
+            <div class="option-item ">              
+              <label>
+              <input type="checkbox" class="custom-control-input option-val" id="${val.option_key}" value="${val.option_price}" >
+              <span>${val.option_label} : ${val.option_price}</span>
+              </label>
+              ${amount}      
+          </div>
       `
         });
       });
 
       $('#' + el).html('').html(html_skele + '<hr/>')
 
+      amount_click()
+
+
+
+
+    }
+
+    function amount_click() {
+      $('.item-amount').change(function () {
+        // console.log($(this).val())
+        $(this).parent().parent().find('.option-val').prop('checked', true)
+      })
     }
 
     function selectEvent() {
@@ -89,7 +103,7 @@
         // console.log('change') 
 
         let is_active = $(this).find('.option-val').prop("checked");
-        console.log(is_active)
+        // console.log(is_active)
         let item_amount = $(this).find('.item-amount').val();
         // console.log('item_amount ' + item_amount)
 
@@ -113,9 +127,30 @@
             price: val
           })
         }
-        console.log(global_select_packet)
+        // console.log(global_select_packet)
+        let before_count = $('#total').text()
         let total = sum_select_packet(global_select_packet)
         $('#total').text(total)
+
+        //animate counter
+        $('#total').each(function () {
+          var $this = $(this);
+          $({
+            Counter: parseInt(before_count)
+          }).animate({
+            Counter: $this.text()
+          }, {
+            duration: 1500,
+            easing: 'swing',
+            step: function () {
+              $this.text(Math.ceil(this.Counter));
+            },
+            complete: function () {
+              $this.text(total)
+            }
+          });
+        });
+
         // console.log(total);
 
       })
