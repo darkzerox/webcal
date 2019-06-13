@@ -18,35 +18,70 @@
   <link rel="stylesheet" href="/src/css/style.css" />
   <link rel="stylesheet" href="/src/css/jssocials.css" />
   <link rel="stylesheet" href="/src/css/jssocials-theme-flat.css" />
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 </head>
 
 <body>
+
+
   <div class="container">
-    <h2 class="total-el text-right">TOTAL : <span id="total"></span></h2>
     <div class="row">
-      <div class="col s12">
-        <div id="packet_section"></div>
+      <div class="col s9">
+
+        <div class="row">
+          <div class="col s12">
+            <div id="packet_section"></div>
+          </div>
+        </div>
+
+        <div class="row">
+          <div id="packet_option" class="packets-option"></div>
+          <div id="packet_ecommerce" class="packets-option"></div>
+          <div id="packet_extra" class="packets-option"></div>
+          <div id="packet_server" class="packets-option"></div>
+        </div>
+
+        <div id="share"></div>
+
+        <div class="row">
+          <div class="col s12">
+            <div class="row">
+              <div class="input-field col s12">
+                <input id="email" type="email" class="validate">
+                <label for="email">Email</label>
+                <span class="helper-text" data-error="wrong" data-success="right">Input Email</span>
+
+
+              </div>
+              <div class="input-field col s12">
+                <button class="btn waves-effect waves-light subscribe">Subscribe
+                  <i class="material-icons right">send</i>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col s3 result-sidebar">
+        <h2 class="center-align">Total</h2>
+        <div class="result-list">
+          <div id="result"></div>
+        </div>
+        <div class="result-total">
+          <p class="total-el right-align"><span id="total">
+              <span class="sum-start">0</span> ~
+              <span class="sum-end">0</span>
+            </span></p>
+        </div>
+
+
+
       </div>
     </div>
 
-    <div class="row">
-      <div class="col">
-        <div id="packet_option"></div>
-      </div>
-      <div class="col">
-        <div id="packet_ecommerce"></div>
-      </div>
-      <div class="col">
-        <div id="packet_extra"></div>
-      </div>
-      <div class="col">
-        <div id="packet_server"></div>
-      </div>
-    </div>
 
-    <div id="share"></div>
 
-    <button id="store">Click</button>
+
 
   </div>
 </body>
@@ -55,7 +90,14 @@
 <script type="text/javascript" async src="./src/js/materialize.min.js"></script>
 <script type="text/javascript" async src="./src/js/jsonpath.min.js"></script>
 <script type="text/javascript" async src="./src/js/jssocials.min.js"></script>
+<script src="https://www.gstatic.com/firebasejs/6.0.2/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/6.0.2/firebase-firestore.js"></script>
+<script src="./src/js/nouislider.js"></script>
 
 <script type="text/javascript" async src="./src/js/script.js"></script>
+<!-- <script type="text/javascript" async src="./build/js/script.js"></script> -->
+
+<div class="_form_11"></div><script src="https://magnetolabs77870.activehosted.com/f/embed.php?id=11" type="text/javascript" charset="utf-8"></script>
+
 
 </html>

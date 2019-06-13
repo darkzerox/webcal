@@ -4,6 +4,7 @@
   "description": "",
   "main": "index.js",
   "dependencies": {
+    "@sendgrid/mail": "^6.4.0",
     "babel-cli": "^6.26.0",
     "babel-preset-env": "^1.7.0",
     "materialize-css": "^1.0.0-rc.2",

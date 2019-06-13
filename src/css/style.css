@@ -7,5 +7,49 @@ body {
 }
 
 .total-el {
-  font-size: 50px
+  font-size: 30px
+}
+
+.packets .card {
+  padding: 30px;
+  width: 100%;
+  display: block;
+  cursor: pointer;
+}
+
+.packets-option {
+  margin-bottom: 30px;
+  display: table;
+}
+
+.col.s3.result-sidebar {
+  position: fixed;
+  right: 0;
+  top: 0;
+  background: #f6f6f6;
+  padding: 15px;
+  margin-right: 5px;
+
+}
+
+.result-list {
+  height: 60vh;
+  overflow-y: auto;
+  overflow-x: hidden;
+  padding: 15px;
+}
+
+.card.active {
+  background: #f1f1f1;
+}
+
+.range-field {
+  padding: 0px 35px 35px;
+  display: block;
+}
+
+.item-title-amount {
+  padding: 10px;
+  font-size: 20px;
+  font-weight: bold;
 }

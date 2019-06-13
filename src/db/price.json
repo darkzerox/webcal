@@ -18,280 +18,339 @@
   ],
   "template": [{
     "basic": [{
-        "option_label": "page amount",
+        "option_label": "Number of Page",
         "option_key": "page_amount",
-        "option_price": 50,
+        "option_price_start": 50,
+        "option_price_end": 1500,
         "option_dynamic": true
 
+      },
+      {
+        "option_label": "Copywriting ",
+        "option_key": "write_article",
+        "option_price_start": 50,
+        "option_price_end": 1500,
+        "option_dynamic": true
       },
       {
         "option_label": "responsive",
         "option_key": "responsive",
-        "option_price": 555
+        "option_price_start": 50,
+        "option_price_end": 1500
       },
-      {
-        "option_label": "write article",
-        "option_key": "write_article",
-        "option_price": 20,
-        "option_dynamic": true
-      },
+
       {
         "option_label": "blog",
         "option_key": "blog",
-        "option_price": 455
+        "option_price_start": 50,
+        "option_price_end": 1500
       },
       {
         "option_label": "speed",
         "option_key": "speed",
-        "option_price": 123
+        "option_price_start": 50,
+        "option_price_end": 1500
       },
       {
         "option_label": "seo",
         "option_key": "seo",
-        "option_price": 1070
+        "option_price_start": 50,
+        "option_price_end": 1500
       }
     ],
     "ecommerce": [{
-        "option_label": "onlineshop",
-        "option_key": "onlineshop",
-        "option_price": 1009
-      },
-      {
-        "option_label": "product",
+        "option_label": "Number of Products",
         "option_key": "product",
-        "option_price": 1000,
+        "option_price_start": 1000,
+        "option_price_end": 1500,
         "option_dynamic": true
 
       },
       {
+        "option_label": "onlineshop",
+        "option_key": "onlineshop",
+        "option_price_start": 1009,
+        "option_price_end": 15000
+      },
+      {
         "option_label": "shipping",
         "option_key": "shipping",
-        "option_price": 100
+        "option_price_start": 100,
+        "option_price_end": 1500
       },
       {
         "option_label": "ems_tracking",
         "option_key": "ems_tracking",
-        "option_price": 2000
+        "option_price_start": 2000,
+        "option_price_end": 1500
       },
       {
         "option_label": "sms_message",
         "option_key": "sms_message",
-        "option_price": 1500
+        "option_price_start": 1500,
+        "option_price_end": 1500
       },
       {
         "option_label": "payment",
         "option_key": "payment",
-        "option_price": 3000
+        "option_price_start": 3000,
+        "option_price_end": 1500
       }
     ],
 
     "extra": [{
         "option_label": "logo design",
         "option_key": "logo_design",
-        "option_price": 500
+        "option_price_start": 500,
+        "option_price_end": 1500
       },
       {
         "option_label": "contact form",
         "option_key": "contact_form",
-        "option_price": 888
+        "option_price_start": 888,
+        "option_price_end": 150
       }, {
         "option_label": "member",
         "option_key": "member",
-        "option_price": 777
+        "option_price_start": 777,
+        "option_price_end": 1500
       }, {
         "option_label": "gallery",
         "option_key": "gallery",
-        "option_price": 555
+        "option_price_start": 555,
+        "option_price_end": 1500
       }, {
         "option_label": "google analytic",
         "option_key": "google_analytic",
-        "option_price": 100
+        "option_price_start": 100,
+        "option_price_end": 1500
       },
       {
         "option_label": "social shere",
         "option_key": "social_shere",
-        "option_price": 850
+        "option_price_start": 850,
+        "option_price_end": 1500
       },
       {
         "option_label": "live chat",
         "option_key": "live_chat",
-        "option_price": 369
+        "option_price_start": 369,
+        "option_price_end": 1500
       },
       {
         "option_label": "multiple language",
         "option_key": "multiple_language",
-        "option_price": 120
+        "option_price_start": 120,
+        "option_price_end": 1500
       },
       {
         "option_label": "migrade",
         "option_key": "migrade",
-        "option_price": 445
+        "option_price_start": 445,
+        "option_price_end": 1500
       },
       {
         "option_label": "site search",
         "option_key": "site_search",
-        "option_price": 150
+        "option_price_start": 150,
+        "option_price_end": 1500
       }
     ],
 
     "server": [{
         "option_label": "domain",
         "option_key": "domain",
-        "option_price": 100
+        "option_price_start": 100,
+        "option_price_end": 1500
       },
       {
         "option_label": "hosting",
         "option_key": "hosting",
-        "option_price": 100
+        "option_price_start": 100,
+        "option_price_end": 1500
       },
       {
         "option_label": "https",
         "option_key": "https",
-        "option_price": 100
+        "option_price_start": 100,
+        "option_price_end": 1500
       },
       {
         "option_label": "backup",
         "option_key": "backup",
-        "option_price": 100
+        "option_price_start": 100,
+        "option_price_end": 1500
       }
     ]
 
   }],
-
   "freelance": [{
     "basic": [{
-        "option_label": "page amount",
+        "option_label": "Number of Page",
         "option_key": "page_amount",
-        "option_price": 123
+        "option_price_start": 500,
+        "option_price_end": 15000,
+        "option_dynamic": true
+
+      },
+      {
+        "option_label": "Copywriting ",
+        "option_key": "write_article",
+        "option_price_start": 50,
+        "option_price_end": 1500,
+        "option_dynamic": true
       },
       {
         "option_label": "responsive",
         "option_key": "responsive",
-        "option_price": 456
+        "option_price_start": 50,
+        "option_price_end": 1500
       },
-      {
-        "option_label": "write article",
-        "option_key": "write_article",
-        "option_price": 789
-      },
+
       {
         "option_label": "blog",
         "option_key": "blog",
-        "option_price": 1001
+        "option_price_start": 50,
+        "option_price_end": 1500
       },
       {
         "option_label": "speed",
         "option_key": "speed",
-        "option_price": 1123
+        "option_price_start": 50,
+        "option_price_end": 1500
       },
       {
         "option_label": "seo",
         "option_key": "seo",
-        "option_price": 2345
+        "option_price_start": 50,
+        "option_price_end": 1500
       }
     ],
     "ecommerce": [{
-        "option_label": "onlineshop",
-        "option_key": "onlineshop",
-        "option_price": 4567
+        "option_label": "Number of Products",
+        "option_key": "product",
+        "option_price_start": 1000,
+        "option_price_end": 1500,
+        "option_dynamic": true
+
       },
       {
-        "option_label": "product",
-        "option_key": "product",
-        "option_price": 7890
+        "option_label": "onlineshop",
+        "option_key": "onlineshop",
+        "option_price_start": 1009,
+        "option_price_end": 15000
       },
       {
         "option_label": "shipping",
         "option_key": "shipping",
-        "option_price": 1155
+        "option_price_start": 100,
+        "option_price_end": 1500
       },
       {
         "option_label": "ems_tracking",
         "option_key": "ems_tracking",
-        "option_price": 7755
+        "option_price_start": 2000,
+        "option_price_end": 1500
       },
       {
         "option_label": "sms_message",
         "option_key": "sms_message",
-        "option_price": 4411
+        "option_price_start": 1500,
+        "option_price_end": 1500
       },
       {
         "option_label": "payment",
         "option_key": "payment",
-        "option_price": 5544
+        "option_price_start": 3000,
+        "option_price_end": 1500
       }
     ],
 
     "extra": [{
         "option_label": "logo design",
         "option_key": "logo_design",
-        "option_price": 7788
+        "option_price_start": 500,
+        "option_price_end": 1500
       },
       {
         "option_label": "contact form",
         "option_key": "contact_form",
-        "option_price": 4455
+        "option_price_start": 888,
+        "option_price_end": 150
       }, {
         "option_label": "member",
         "option_key": "member",
-        "option_price": 4455
+        "option_price_start": 777,
+        "option_price_end": 1500
       }, {
         "option_label": "gallery",
         "option_key": "gallery",
-        "option_price": 7788
+        "option_price_start": 555,
+        "option_price_end": 1500
       }, {
         "option_label": "google analytic",
         "option_key": "google_analytic",
-        "option_price": 9977
+        "option_price_start": 100,
+        "option_price_end": 1500
       },
       {
         "option_label": "social shere",
         "option_key": "social_shere",
-        "option_price": 4455
+        "option_price_start": 850,
+        "option_price_end": 1500
       },
       {
         "option_label": "live chat",
         "option_key": "live_chat",
-        "option_price": 778
+        "option_price_start": 369,
+        "option_price_end": 1500
       },
       {
         "option_label": "multiple language",
         "option_key": "multiple_language",
-        "option_price": 998
+        "option_price_start": 120,
+        "option_price_end": 1500
       },
       {
         "option_label": "migrade",
         "option_key": "migrade",
-        "option_price": 778
+        "option_price_start": 445,
+        "option_price_end": 1500
       },
       {
         "option_label": "site search",
         "option_key": "site_search",
-        "option_price": 4445
+        "option_price_start": 150,
+        "option_price_end": 1500
       }
     ],
 
     "server": [{
         "option_label": "domain",
         "option_key": "domain",
-        "option_price": 444
+        "option_price_start": 100,
+        "option_price_end": 1500
       },
       {
         "option_label": "hosting",
         "option_key": "hosting",
-        "option_price": 777
+        "option_price_start": 100,
+        "option_price_end": 1500
       },
       {
         "option_label": "https",
         "option_key": "https",
-        "option_price": 999
+        "option_price_start": 100,
+        "option_price_end": 1500
       },
       {
         "option_label": "backup",
         "option_key": "backup",
-        "option_price": 777
+        "option_price_start": 100,
+        "option_price_end": 1500
       }
     ]
 
   }]
+
 }
