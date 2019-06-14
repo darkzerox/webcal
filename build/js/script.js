@@ -1,7 +1,7 @@
-'use strict';
+"use strict";
 
 (function ($) {
-  $(document).ready(function () {    
+  $(document).ready(function () {
 
     //social share
     $("#share").jsSocials({
@@ -21,9 +21,9 @@
 
         packet[0].forEach(function (res) {
           // console.log(res)
-          packethtml += '    \n          <div class="col s3 packets">\n            <label class="card">                        \n              <input class="packet card-content" name="packet-item" type="radio" id="' + res.packet + '" val="' + res.packet + '" />\n              <span>' + res.label + '</span>               \n            </label>   \n    \n          </div>\n          ';
+          packethtml += "    \n          <div class=\"col s3 packets\">\n            <label class=\"card\">                        \n              <input class=\"packet card-content\" name=\"packet-item\" type=\"radio\" id=\"" + res.packet + "\" val=\"" + res.packet + "\" />\n              <span>" + res.label + "</span>               \n            </label>   \n    \n          </div>\n          ";
         });
-        packethtml = '<div>' + packethtml + '</div>';
+        packethtml = "<div>" + packethtml + "</div>";
 
         $("#packet_section").html("").html(packethtml);
 
@@ -62,7 +62,7 @@
       if (!desc) {
         desc = '';
       }
-      var html_skele = '<h5>' + title + '</h5><p>' + desc + '</p>';
+      var html_skele = "<h5>" + title + "</h5><p>" + desc + "</p>";
       var amount = "";
       var cal_class = "col s6";
 
@@ -71,12 +71,12 @@
           // console.log(val.option_dynamic)
           amount = '';
           if (val.option_dynamic == true) {
-            amount = '<span class="range-field">\n              <input type="range" class="item-amount " placeholder="Input page amount" step="5" min="5" max="50"  />  \n              \n            </span>';
+            amount = "<span class=\"range-field\">\n              <input type=\"range\" class=\"item-amount \" placeholder=\"Input page amount\" step=\"5\" min=\"5\" max=\"50\"  />  \n              \n            </span>";
             cal_class = "col s12";
           } else {
             cal_class = "col s6";
           }
-          html_skele += '          \n            <div class="option-item ' + cal_class + '">              \n              <label>\n              <input type="checkbox" class="custom-control-input option-val" id="' + val.option_key + '" value="' + val.option_price_start + '" val-end="' + val.option_price_end + '">\n              <span class="float-left item-title">' + val.option_label + '</span>\n              ' + amount + ' \n              </label>\n          </div>';
+          html_skele += "          \n            <div class=\"option-item " + cal_class + "\">              \n              <label>\n              <input type=\"checkbox\" class=\"custom-control-input option-val\" id=\"" + val.option_key + "\" value=\"" + val.option_price_start + "\" val-end=\"" + val.option_price_end + "\">\n              <span class=\"float-left item-title\">" + val.option_label + "</span>\n              " + amount + " \n              </label>\n          </div>";
         });
       });
 
@@ -111,7 +111,7 @@
           val_start *= item_amount;
           val_end *= item_amount;
           $(this).find('.item-title-amount').remove();
-          $(this).find('.item-title').append('<span class="item-title-amount">' + item_amount + '</span>');
+          $(this).find('.item-title').append("<span class=\"item-title-amount\">" + item_amount + "</span>");
         }
 
         global_select_packet = $.grep(global_select_packet, function (value) {
@@ -215,11 +215,11 @@
     $.each(data, function (i, j) {
       console.log(j);
       if (j.item_amount > 1) {
-        result_item_amount = ' <div class="result_item_amount">X ' + j.item_amount + '</div>';
+        result_item_amount = " <div class=\"result_item_amount\">X " + j.item_amount + "</div>";
       } else {
         result_item_amount = '';
       }
-      result_html += '\n      \n        <div class="row">\n          <div class="col s6">\n            <div class="result_name">' + j.key + '</div>\n            ' + result_item_amount + '\n          </div>\n          <div class="col s6 right-align">' + commaSeparateNumber(j.price_start) + ' ~ ' + commaSeparateNumber(j.price_end) + '</div>\n        </div>\n     \n      ';
+      result_html += "\n      \n        <div class=\"row\">\n          <div class=\"col s6\">\n            <div class=\"result_name\">" + j.key + "</div>\n            " + result_item_amount + "\n          </div>\n          <div class=\"col s6 right-align\">" + commaSeparateNumber(j.price_start) + " ~ " + commaSeparateNumber(j.price_end) + "</div>\n        </div>\n     \n      ";
     });
 
     $('#result').html(result_html);
